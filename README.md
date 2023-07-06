@@ -11,5 +11,5 @@ add "export PATH=$PATH:/home/`whoami`/.local/bin", close (ctrl + x) & save
   - ansible-galaxy collection install community.crypto community.general community.mysql
   - then clone this repo and move to the playbooks folder
 To run the playbook:
-ansible-playbook ~/install_packages/site.yml -e auth_os_user=`whoami` -e 'ansible_python_interpreter: /usr/bin/python3' -K
+ansible-playbook script.yml -e auth_os_user=`whoami` -e 'ansible_python_interpreter: /usr/bin/python3' -K
 
