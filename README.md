@@ -6,10 +6,10 @@ Dependencies to install beforhand:
   - sudo apt install python3-pip
   - pip3 install ansible-core
   - nano ~/.bashrc
-add "export PATH=$PATH:/home/`whoami`/.local/bin", close (ctrl + x) & save
+add "export PATH=$PATH:/home/'whoami'/.local/bin", close (ctrl + x) & save
   - source ~/.bashrc
   - ansible-galaxy collection install community.crypto community.general community.mysql
   - then clone this repo and move to the playbooks folder
 To run the playbook:
-ansible-playbook script.yml -e auth_os_user=`whoami` -e 'ansible_python_interpreter: /usr/bin/python3' -K
+ansible-playbook script.yml -e auth_os_user='whoami' -e 'ansible_python_interpreter: /usr/bin/python3' -K
 
