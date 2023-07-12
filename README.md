@@ -13,3 +13,5 @@ add "export PATH=$PATH:/home/'whoami'/.local/bin", close (ctrl + x) & save
 To run the playbook:
 ansible-playbook script.yml -e auth_os_user='whoami' -e 'ansible_python_interpreter: /usr/bin/python3' -K
 
+!! Inside the Playbook there is a Variable called 
+
