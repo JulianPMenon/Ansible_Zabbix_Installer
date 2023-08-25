@@ -75,6 +75,7 @@
       community.mysql.mysql_db:
         name: zabbix
         encoding: utf8mb4
+        collation: utf8mb4_bin
         state: present
 
     - name: search for server.sql
