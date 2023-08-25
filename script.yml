@@ -88,11 +88,12 @@
         cmd: gunzip /usr/share/zabbix-sql-scripts/mysql/server.sql.gz
       when: not result.stat.exists
 
-    - name: import preset (not idempotent)
+    - name: import preset (will not be executed if server.sql existed before Extracting)
       community.mysql.mysql_db:
         name: zabbix
         state: import
         target: /usr/share/zabbix-sql-scripts/mysql/server.sql
+      when: not result.stat.exists
 
     - name: set new database password for mysql database
       ansible.builtin.lineinfile:
